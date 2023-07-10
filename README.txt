@@ -14,7 +14,7 @@ source venv/bin/activate
 
 More info about install and activate virtual environment, view the link below:
 https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
-------------------------------------------------------------------
+
 
 (install django for the first time)
 pip install django 
