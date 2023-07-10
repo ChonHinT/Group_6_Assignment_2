@@ -1,3 +1,8 @@
+(tutorial)
+https://www.youtube.com/watch?v=VOwfGW-ZTIY&t=660s
+
+---------------------------------------------------------
+
 install virtual environment
 (Mac user) python3 -m pip install virtualenv
 
@@ -23,9 +28,7 @@ http://127.0.0.1:8000/admin/
 username: admin
 password: password
 
-(tutorial)
-https://www.youtube.com/watch?v=VOwfGW-ZTIY&t=660s
-
+-----------------------------------------------------------------
 Version:
 Latest: 10th July - So far, the webpage has different items with their belonged category, can add items into basket, browse products (Calvin)
 
