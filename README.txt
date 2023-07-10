@@ -20,4 +20,4 @@ password: password
 (tutorial)
 https://www.youtube.com/watch?v=VOwfGW-ZTIY&t=660s
 
-10th July - So far, the webpage is able to search products, but still working on how to add items into the basket. (Calvin)
+10th July - So far, the webpage is able to search products, add products into basket (Calvin)
