@@ -20,10 +20,10 @@ password: password
 https://www.youtube.com/watch?v=VOwfGW-ZTIY&t=660s
 
 Latest version
-10th July - So far, the webpage has different items with their belonged category, can add items into basket (Calvin)
+10th July - So far, the webpage has different items with their belonged category, can add items into basket, browse products (Calvin)
 
 Details: In this project, you will develop an e-commerce platform that allows users to 
-1. browse products
+1. browse products (done)
 2. add items to their shopping cart (done)
 3. securely make purchases. 
 
