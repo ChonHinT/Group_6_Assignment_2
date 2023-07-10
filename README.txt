@@ -1,8 +1,8 @@
 You need to create vitural environment
-(mac user) python3 -m venv venv
+(Mac user) python3 -m venv venv
 
 
-(activate vitural environment)
+(activate vitural environment, also Mac user)
 source venv/bin/activate 
 
 (install django for the first time)
@@ -12,7 +12,7 @@ pip install django
 (run server)
 python3 manage.py runserver  
 
-
+(To access admin page)
 http://127.0.0.1:8000/admin/
 username: admin
 password: password
@@ -20,8 +20,8 @@ password: password
 (tutorial)
 https://www.youtube.com/watch?v=VOwfGW-ZTIY&t=660s
 
-Latest version
-10th July - So far, the webpage has different items with their belonged category, can add items into basket, browse products (Calvin)
+Version:
+Latest: 10th July - So far, the webpage has different items with their belonged category, can add items into basket, browse products (Calvin)
 
 Details: In this project, you will develop an e-commerce platform that allows users to 
 1. browse products (done)
