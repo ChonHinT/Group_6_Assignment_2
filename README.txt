@@ -2,8 +2,10 @@ You need to create vitural environment
 (mac user) python3 -m venv venv
 
 
-(Mac users to run the server)
+(activate vitural environment)
 source venv/bin/activate 
+
+(run server)
 pip install django 
 * may also need to install Pillow (pip install Pillow)
 python3 manage.py makemigrations
