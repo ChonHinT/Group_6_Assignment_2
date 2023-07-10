@@ -16,10 +16,10 @@ http://127.0.0.1:8000/admin/
 username: admin
 password: password
 
-
 (tutorial)
 https://www.youtube.com/watch?v=VOwfGW-ZTIY&t=660s
 
+Latest version
 10th July - So far, the webpage has different items with their belonged categories, can add items into basket (Calvin)
 
 Details: In this project, you will develop an e-commerce platform that allows users to 
