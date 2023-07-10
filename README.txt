@@ -21,3 +21,10 @@ password: password
 https://www.youtube.com/watch?v=VOwfGW-ZTIY&t=660s
 
 10th July - So far, the webpage has different items with their belonged categories, can add items into basket (Calvin)
+
+Details: In this project, you will develop an e-commerce platform that allows users to 
+1. browse products
+2. add items to their shopping cart (done)
+3. securely make purchases. 
+
+You will need to ensure that your platform is secure from command injection attacks, which occur when an attacker injects malicious code into a system through a command injection vulnerability. You will also need to ensure that all user data, including personal and financial information, is stored securely.
