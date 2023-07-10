@@ -1,5 +1,5 @@
 install virtual environment
-python3 -m pip install virtualenv
+(Mac user) python3 -m pip install virtualenv
 
 You need to create vitural environment
 (Mac user) python3 -m venv venv
