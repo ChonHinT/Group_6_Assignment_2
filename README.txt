@@ -27,4 +27,5 @@ Details: In this project, you will develop an e-commerce platform that allows us
 2. add items to their shopping cart (done)
 3. securely make purchases. 
 
-You will need to ensure that your platform is secure from command injection attacks, which occur when an attacker injects malicious code into a system through a command injection vulnerability. You will also need to ensure that all user data, including personal and financial information, is stored securely.
+You will need to ensure that your platform is secure from command injection attacks, which occur when an attacker injects malicious code into a system through a command injection vulnerability. 
+You will also need to ensure that all user data, including personal and financial information, is stored securely.
