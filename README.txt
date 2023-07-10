@@ -1,9 +1,15 @@
+install virtual environment
+python3 -m pip install virtualenv
+
 You need to create vitural environment
 (Mac user) python3 -m venv venv
 
-
 (activate vitural environment, also Mac user)
 source venv/bin/activate 
+
+More info about install and activate virtual environment, view the link below:
+https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
+------------------------------------------------------------------
 
 (install django for the first time)
 pip install django 
