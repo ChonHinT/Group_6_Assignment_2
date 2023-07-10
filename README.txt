@@ -1,3 +1,7 @@
+You need to create vitural environment
+(mac user) python3 -m venv venv
+
+
 (Mac users to run the server)
 source venv/bin/activate 
 pip install django 
