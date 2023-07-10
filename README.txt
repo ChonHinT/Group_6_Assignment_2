@@ -5,12 +5,13 @@ You need to create vitural environment
 (activate vitural environment)
 source venv/bin/activate 
 
-(run server)
+(install django for the first time)
 pip install django 
 * may also need to install Pillow (pip install Pillow)
-python3 manage.py makemigrations
-python3 manage.py migrate 
+
+(run server)
 python3 manage.py runserver  
+
 
 http://127.0.0.1:8000/admin/
 username: admin
