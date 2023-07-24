@@ -47,3 +47,13 @@ Details: In this project, you will develop an e-commerce platform that allows us
 
 You will need to ensure that your platform is secure from command injection attacks, which occur when an attacker injects malicious code into a system through a command injection vulnerability. 
 You will also need to ensure that all user data, including personal and financial information, is stored securely.
+
+-----------------------------------------------------------------
+
+Maybe useful for prevention
+
+MFA 
+1. https://dev.to/arnopretorius/multi-factor-authentication-mfa-for-your-django-admin-page-4ec9
+
+2. Security in Django 
+https://docs.djangoproject.com/en/4.2/topics/security/
