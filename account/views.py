@@ -12,6 +12,7 @@ from orders.views import user_orders
 from .forms import RegistrationForm, UserEditForm
 from .models import UserBase
 from .tokens import account_activation_token
+from django.contrib.auth import login, logout
 
 @login_required
 def dashboard(request):
@@ -40,7 +41,7 @@ def delete_user(request):
     user = UserBase.objects.get(user_name=request.user)
     user.is_active = False
     user.save()
-    logout(request)
+    logout(request) # use django's logout method to clear the user's session data
     return redirect('account:delete_confirmation')
 
 
@@ -67,9 +68,14 @@ def account_register(request):
             })
             user.email_user(subject=subject, message=message)
             return HttpResponse('registered succesfully and activation sent')
+        else:
+            error_message = "The password you provided is too common or does not meet the requirement. Please choose a different one."
+            return render(request, 'account/registration/register.html', {'form': registerForm, 'error_message':error_message})
     else:
         registerForm = RegistrationForm()
+        
     return render(request, 'account/registration/register.html', {'form': registerForm})
+
 
 
 def account_activate(request, uidb64, token):
@@ -85,3 +91,6 @@ def account_activate(request, uidb64, token):
         return redirect('account:dashboard')
     else:
         return render(request, 'account/registration/activation_invalid.html')
+
+
+
