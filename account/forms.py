@@ -1,8 +1,15 @@
 from django import forms
 from django.contrib.auth.forms import (AuthenticationForm, PasswordResetForm,
                                        SetPasswordForm)
-
 from .models import UserBase
+import re
+
+
+Common_password = ['123456', 'password', '123456789', '12345', '12345678', 'qwerty',
+    '1234567', '111111', '1234567890', '123123', 'abc123', '1234', 'password1',
+    'iloveyou', '1q2w3e4r', '000000', 'qwerty123', 'zaq12wsx', 'dragon',
+    'sunshine', 'princess', 'letmein', '654321', 'monkey', '27653',
+    '1qaz2wsx', '123321', 'qwertyuiop', 'superman', 'asdfghjkl']
 
 
 class UserLoginForm(AuthenticationForm):
@@ -38,19 +45,43 @@ class RegistrationForm(forms.ModelForm):
         if r.count():
             raise forms.ValidationError("Username already exists")
         return user_name
+    
+    
+    def clean_password(self):
+        password = self.cleaned_data.get('password')
+
+        if password.lower() in [common.lower() for common in Common_password]:
+            raise forms.ValidationError('Error')
+        elif not re.search(r'[A-Z]', password):
+            raise forms.ValidationError('Error')
+        elif not re.search(r'[a-z]', password):
+            raise forms.ValidationError('Error')
+        elif not re.search(r'[0-9]', password):
+            raise forms.ValidationError('Error')
+        elif not re.search(r'[!@#%^&*()_+{}|:"<>?]', password):
+            raise forms.ValidationError('Error')
+        elif len(password) < 10:
+            raise forms.ValidationError('Error')
+        return password
+    
 
     def clean_password2(self):
         cd = self.cleaned_data
-        if cd['password'] != cd['password2']:
-            raise forms.ValidationError('Passwords do not match.')
-        return cd['password2']
+        password = cd.get('password')
+        password2 = cd.get('password2')
 
+        if password and password2 and password != password2:
+            raise forms.ValidationError('Password do not match.')
+        
+        return password2
+    
     def clean_email(self):
         email = self.cleaned_data['email']
         if UserBase.objects.filter(email=email).exists():
             raise forms.ValidationError(
                 'Please use another Email, that is already taken')
         return email
+    
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -109,3 +140,4 @@ class UserEditForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['user_name'].required = True
         self.fields['email'].required = True
+
