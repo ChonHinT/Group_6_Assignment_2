@@ -12,6 +12,20 @@
         border-color: #1497ff;
         box-shadow: none;
     }
+
+    /* Custom styles for error message */
+    .error-message {
+        background-color: red; /* Change this to the color you prefer */
+        color: white; /* Text color for better contrast */
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    /* Custom styles for SVG icon */
+    .error-icon {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
 </style>
 
 <div class="container-fluid">
@@ -21,20 +35,32 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-lg-7  mx-auto">
-                             <form class="account-form p-4 rounded col-lg-10 mx-auto" action="." method="post">
+                            <form class="account-form p-4 rounded col-lg-10 mx-auto" action="." method="post">
                                 {% csrf_token %}
                                 <h3 class="mb-2 font-weight-bold">Create an account</h3>
-                                <p class="mb-4">It's free and only few steps.</p>
+                                <p class="mb-4">It's free and only a few steps.</p>
 
                                 {% if form.errors %}
-                                <p>Please correct the following errors:</p>
-                                {% for field in form %}
-                                {% if field.errors %}
-                                <div class="alert alert-primary" role="alert">
-                                    {{ field.label }}: {{ field.errors|striptags }}
-                                </div>
-                                {% endif %}
-                                {% endfor %}
+                                    {% if error_message %}
+                                        <div class="error-message">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                                class="bi bi-info-circle me-2 error-icon" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path
+                                                    d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                            </svg>
+                                            {{ error_message }}
+                                        </div>
+                                    {% else %}
+                                        <p>Please correct the following errors:</p>
+                                        {% for field in form %}
+                                            {% if field.errors %}
+                                                <div class="alert alert-primary" role="alert">
+                                                    {{ field.label }}: {{ field.errors|striptags }}
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endif %}
                                 {% endif %}
 
                                 <label>{{ form.user_name.label }}<span class="text-muted small">
@@ -45,8 +71,8 @@
                                 {{ form.email }}
                                 <label>{{ form.password.label}}<span class="text-muted mb-4">
                                         </span></label>
-                                 <small class="form-text text-muted mb-4 small">
-                                    At least 8 characters and 1 digit
+                                <small class="form-text text-muted mb-4 small">
+                                    (create a password that is at least 10 characters long and includes a mix of uppercase and lowercase letters, at least one digit, one special character (!@#$%^&*()_+{}|:"<>?))
                                 </small>
                                 {{ form.password }}
                                 <label>{{ form.password2.label}}<span class="text-muted small">
