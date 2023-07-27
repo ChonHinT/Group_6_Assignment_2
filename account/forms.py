@@ -28,12 +28,16 @@ class UserLoginForm(AuthenticationForm):
 class RegistrationForm(forms.ModelForm):
 
     user_name = forms.CharField(
-        label='Enter Username', min_length=4, max_length=50, help_text='Required')
+        label='Enter Username', min_length=4, max_length=10, help_text='Required (maximum length: 10 characters)',
+        error_messages = {'max_length': 'Username must be 10 characters or fewer.'})
+    
     email = forms.EmailField(max_length=100, help_text='Required', error_messages={
         'required': 'Sorry, you will need an email'})
+    
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
+
     password2 = forms.CharField(
-        label='Repeat password', widget=forms.PasswordInput)
+        label='Confirm your password', widget=forms.PasswordInput)
 
     class Meta:
         model = UserBase
