@@ -58,3 +58,10 @@ MFA
 
 2. Security in Django 
 https://docs.djangoproject.com/en/4.2/topics/security/
+
+-----------------------------------------------------------------
+Can be amended 
+1. admin password no restriction (admin password can be password, may fix it similar to user registration, using strong password)
+2. two-factor authentication
+3. restrict limit of attempt, like after 3-5 times wrong password then block 5 mins to re-try again
+
