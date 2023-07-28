@@ -102,7 +102,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 BASKET_SESSION_ID = 'basket'
 
 # please do not share these key
-Stripe Payment
+# Stripe Payment
 PUBLISHABLE_KEY = 'pk_test_51NWeAbGWoDj5YYcy38M9hm89yceo8nGBhGf8phbw6S6fD1RUTqe0mTPwJboSdPmmpDfAKFuB7rEGkXGUDhKc4VqR00ZDLG7K48'
 SECRET_KEY = 'sk_test_51NWeAbGWoDj5YYcynIJzCrTsCwHA08T4uEoZ0FqTh4cfYi2Cx3fiuRgFX4APsSndEmTLpwW4L40PYte3MxwgWppi00K31kBvXB'
 STRIPE_ENDPOINT_SECRET = 'whsec_c5be67da41f292f08c5451091b2cfc5f289a348c584679378ccf860228ac2cbc'
