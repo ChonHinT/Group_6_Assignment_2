@@ -56,7 +56,8 @@ Things need to reinforce:
 Version:
 Old: 10th July - So far, the webpage has different items with their belonged category, can add items into basket, browse products (Calvin)
 Old: 22nd July - added create User and login function & payment (Calvin)
-Latest: 25th July - reinforced password requirement when user register an account
+Old: 25th July - reinforced password requirement when user register an account (Calvin)
+Latest: 1st Aug - hashed password reinforcement
 
 Details: In this project, you will develop an e-commerce platform that allows users to 
 1. browse products (done)
