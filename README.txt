@@ -51,6 +51,7 @@ Things need to reinforce:
 1. admin password no restriction (admin password can be password, may fix it similar to user registration, using strong password)
 2. two-factor authentication
 3. restrict limit of attempt (done) (I was using django-axes package. I set the failed attempted to 5, so if the user gave the wrong password more than 5 times, it then blocked up the user, it can avoid Brute force attack) (Calvin)
+4. try to deploy reCAPTCHA
 
 -----------------------------------------------------------------
 
