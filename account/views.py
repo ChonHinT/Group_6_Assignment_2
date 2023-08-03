@@ -92,5 +92,16 @@ def account_activate(request, uidb64, token):
     else:
         return render(request, 'account/registration/activation_invalid.html')
 
+@axes_dispatch
+def login_view(request):
+    if request.method == 'POST':
+        user_name = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, user_name=user_name, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect('home') 
+    return render(request, 'account/login.html')
+
 
 
