@@ -23,7 +23,7 @@ pip install Pillow
 pip install django-country2
 pip install stripe
 pip install six
-pip install django-axes (after this, possibly need to make migration --> python3 manage.py migrate axes)
+pip install django-axes
 
 (run server)
 python3 manage.py runserver  
