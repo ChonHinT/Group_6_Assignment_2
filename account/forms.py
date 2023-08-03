@@ -3,6 +3,8 @@ from django.contrib.auth.forms import (AuthenticationForm, PasswordResetForm,
                                        SetPasswordForm)
 from .models import UserBase
 import re
+from captcha.fields import ReCaptchaField
+from django.contrib.auth.forms import AuthenticationForm
 
 
 Common_password = ['123456', 'password', '123456789', '12345', '12345678', 'qwerty',
@@ -23,6 +25,7 @@ class UserLoginForm(AuthenticationForm):
             'id': 'login-pwd',
         }
     ))
+    captcha = ReCaptchaField()
 
 
 class RegistrationForm(forms.ModelForm):
@@ -144,4 +147,7 @@ class UserEditForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['user_name'].required = True
         self.fields['email'].required = True
+
+class AuthenticationFormWithCaptcha(AuthenticationForm):
+    captcha = ReCaptchaField()
 
