@@ -24,6 +24,7 @@ pip install django-country2
 pip install stripe
 pip install six
 pip install django-axes (after installed this, may need to migrate axes --> python3 manage.py migrate)
+pip install django-recaptcha
 
 (run server)
 python3 manage.py runserver  
