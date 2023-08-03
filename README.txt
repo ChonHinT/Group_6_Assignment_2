@@ -51,7 +51,7 @@ Things need to reinforce:
 1. admin password no restriction (admin password can be password, may fix it similar to user registration, using strong password)
 2. two-factor authentication
 3. restrict limit of attempt (done) (I was using django-axes package. I set the failed attempted to 5, so if the user gave the wrong password more than 5 times, it then blocked up the user, it can avoid Brute force attack) (Calvin)
-4. try to deploy reCAPTCHA
+4. try to deploy reCAPTCHA (done Calvin)
 
 -----------------------------------------------------------------
 
@@ -60,7 +60,8 @@ Old: 10th July - So far, the webpage has different items with their belonged cat
 Old: 22nd July - added create User and login function & payment (Calvin)
 Old: 25th July - reinforced password requirement when user register an account (Calvin)
 Old: 1st Aug - hashed password reinforcement (Calvin)
-Latest: 3rd Aug - deployed django-axes packages to restrict limited of attempted enter password (Calvin)
+Old: 3rd Aug - deployed django-axes packages to restrict limited of attempted enter password (Calvin)
+Latest: 3rd Aug - deployed reCaptcha (Calvin - will update the code soon)
 
 Details: In this project, you will develop an e-commerce platform that allows users to 
 1. browse products (done)
