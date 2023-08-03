@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 
 from . import views
 from .forms import (PwdResetConfirmForm, PwdResetForm, UserLoginForm)
+from .views import LoginViewWithCaptcha, dashboard, edit_details, delete_user, account_register, account_activate
 
 # https://docs.djangoproject.com/en/3.1/topics/auth/default/
 # https://ccbv.co.uk/projects/Django/3.0/django.contrib.auth.views/PasswordResetConfirmView/
