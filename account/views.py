@@ -12,6 +12,10 @@ from .models import UserBase
 from .tokens import account_activation_token
 from django.contrib.auth import authenticate, login
 from axes.decorators import axes_dispatch
+from django.contrib.auth.views import LoginView
+from .forms import AuthenticationFormWithCaptcha
+
+
 
 
 @login_required
@@ -102,6 +106,11 @@ def login_view(request):
             login(request, user)
             return redirect('home') 
     return render(request, 'account/login.html')
+
+ 
+class LoginViewWithCaptcha(LoginView):
+    form_class = AuthenticationFormWithCaptcha
+
 
 
 
