@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'payment',
     'orders',
     'axes',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -137,3 +138,6 @@ AXES_FAILURE_LIMIT = 5
 AXES_LOCK_OUT_AT_FAILURE = True
 AXES_LOCKOUT_TEMPLATE = 'account/lockout.html'
 AXES_LOCKOUT_POLICY = 'axes.lockout_policy.Combined'
+
+RECAPTCHA_PUBLIC_KEY = '6Le2v3gnAAAAACwVwPN4AqeobaGmkBIynYLlXPho'
+RECAPTCHA_PRIVATE_KEY = '6Le2v3gnAAAAAJECzRWKJl-9wRXB2Xj3zzJhHR-5'
