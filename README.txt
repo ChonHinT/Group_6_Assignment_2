@@ -62,7 +62,7 @@ Old: 22nd July - added create User and login function & payment (Calvin)
 Old: 25th July - reinforced password requirement when user register an account (Calvin)
 Old: 1st Aug - hashed password reinforcement (Calvin)
 Old: 3rd Aug - deployed django-axes packages to restrict limited of attempted enter password (Calvin)
-Latest: 3rd Aug - deployed reCaptcha (Calvin - will update the code soon)
+Latest: 3rd Aug - deployed reCaptcha (Calvin)
 
 Details: In this project, you will develop an e-commerce platform that allows users to 
 1. browse products (done)
