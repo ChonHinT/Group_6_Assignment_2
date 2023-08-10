@@ -35,7 +35,7 @@ class RegistrationForm(forms.ModelForm):
         error_messages = {'max_length': 'Username must be 10 characters or fewer.'})
     
     email = forms.EmailField(max_length=100, help_text='Required', error_messages={
-        'required': 'Sorry, you will need an email'},validators=[RegexValidator('[;&|$<>!]', inverse_match=True)])
+        'required': 'Sorry, you will need an email'},validators=[RegexValidator('[;&|$<>!\()]', inverse_match=True)])
     
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
 
