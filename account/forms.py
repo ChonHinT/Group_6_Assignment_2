@@ -5,7 +5,7 @@ from .models import UserBase
 import re
 from captcha.fields import ReCaptchaField
 from django.contrib.auth.forms import AuthenticationForm
-
+from django.core.validators import RegexValidator
 
 Common_password = ['123456', 'password', '123456789', '12345', '12345678', 'qwerty',
     '1234567', '111111', '1234567890', '123123', 'abc123', '1234', 'password1',
@@ -35,7 +35,7 @@ class RegistrationForm(forms.ModelForm):
         error_messages = {'max_length': 'Username must be 10 characters or fewer.'})
     
     email = forms.EmailField(max_length=100, help_text='Required', error_messages={
-        'required': 'Sorry, you will need an email'})
+        'required': 'Sorry, you will need an email'},validators=[RegexValidator('[;&|$<>!]', inverse_match=True)])
     
     password = forms.CharField(label='Password', widget=forms.PasswordInput)
 
