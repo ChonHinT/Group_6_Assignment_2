@@ -1,0 +1,21 @@
+Website Features List:
+
+1. Login 
+2. Account Registration 
+3. Search Products 
+4. Add items into basket
+5. Check out with payment
+6. Payment uses Stripe 
+7. CAPTCH - google 
+
+
+Authenticatoin:
+  1. Maximum login attempts = 5, after 5 users will be blocked --> prevent brute-force attack
+  2. CAPTCHA - prevent automated multipled login by bots
+  3. Required at least 1 uppercase, 1 lowercase, 1 digit, 1 special characters, at least 10 characters long
+  4. Django uses PBKDF2 hashed password
+
+Command Injection:
+
+
+Buffer Overflow:
