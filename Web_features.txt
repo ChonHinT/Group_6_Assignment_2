@@ -6,7 +6,7 @@ Website Features List:
 4. Add items into basket
 5. Check out with payment
 6. Payment uses Stripe 
-7. CAPTCH - google 
+7. CAPTCH - from google 
 
 
 Authenticatoin:
