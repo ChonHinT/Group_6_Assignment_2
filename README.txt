@@ -7,9 +7,6 @@ You need to create vitural environment
 (activate vitural environment, also Mac user)
 source venv/bin/activate 
 
-More info about install and activate virtual environment, view the link below:
-https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/
-
 ---------------------------------------------------------
 
 (install packages)
