@@ -25,5 +25,6 @@ pip install django-recaptcha
 python3 manage.py runserver  
 
 ---------------------------------------------------------
+
 We refer to this Youtube tutorial to learn how to build an e-commerce platform 
 https://www.youtube.com/watch?v=VOwfGW-ZTIY&t=660s
