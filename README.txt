@@ -1,3 +1,11 @@
+This project is an e-commerce platform for Adelaide BookStore.
+It allows customer to search products, add selected products to shopping basket.
+Register customers are able to checkout securely.
+
+---------------------------------------------------------
+How to run the application
+---------------------------------------------------------
+
 Install virtual environment
 (Mac user) python3 -m pip install virtualenv
 
@@ -20,6 +28,12 @@ pip install django-recaptcha
 
 (run server)
 python3 manage.py runserver  
+Starting development server at http://127.0.0.1:8000/
+
+---------------------------------------------------------
+
+After creating a testing account:
+the acivation email with link will be found in the termial for testing virtual environment
 
 ---------------------------------------------------------
 
