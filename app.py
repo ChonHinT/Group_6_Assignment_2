@@ -20,8 +20,7 @@ from bottle import get, post, request
 #   Refactor code base to make it cleaner and easier to read and write
 #
 #   Add testing capabilities
-#
-#   Make the Site look prettier :)
+
 
 
 app = bottle.Bottle()
