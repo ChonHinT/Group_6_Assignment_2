@@ -18,7 +18,6 @@ Authenticatoin:
 Command Injection:
   1. Input validation via Django form validator in search products, login and account registration functions
 
-SQL Injection:
-
 Buffer Overflow:
-
+  1. Using python to build the module
+  2. SQL Injection prevention
