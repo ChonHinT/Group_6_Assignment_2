@@ -16,6 +16,7 @@ Authenticatoin:
   4. Django uses PBKDF2 hashed password
 
 Command Injection:
+  1. Input validation via Django form validator in search products, login and account registration functions
 
 SQL Injection:
 
