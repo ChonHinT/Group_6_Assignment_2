@@ -1,10 +1,3 @@
-Team members:
-Xiujie pei a1865003​
-Wenhao zhang a1882733​
-Chon Hin Tam a1863573​
-Yook Wo Lui a1869148​
-Li yanze a1836771​
-
 ---------------------------------------------------------
 This project is an e-commerce platform for Adelaide BookStore.
 It allows customer to search products, add selected products to shopping basket.
